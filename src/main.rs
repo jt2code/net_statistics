@@ -6,7 +6,7 @@ fn main() {
     let _path = format!("/sys/class/net/{}/statistics", args.iface);
     let path = Path::new(&_path);
     if !path.is_dir() {
-        eprintln!("Error: not found interface {:?}", "en");
+        eprintln!("Error: not found interface {:?}", args.iface);
         exit(1);
     }
 
